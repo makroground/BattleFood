@@ -52,10 +52,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_start.Designer.cs">
+      <DependentUpon>frm_start.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_start.resx">
+      <DependentUpon>frm_start.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +88,183 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulletrechts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\de_kitchen2_final.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\de_kitchen2_realfinal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eieruhr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fleischklopper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpbar10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpbar20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpbar30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpbar40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpbar50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpbar60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpbar70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpbar80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpbar90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpbar100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpbartot1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lebenplus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_dead1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_die.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_lfn_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_lfn_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_lfn_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_lfn_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_lfn_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marmelade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\messer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\norbert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_dead1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_die.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_lfn_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_lfn_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_lfn_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_lfn_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_lfn_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_lfn_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tasse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frametraxx_Manga-Action.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hauptmenü.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_lfn_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_lfn_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_lfn_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_lfn_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_lfn_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Beenden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fortsetzen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hosten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Optionen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\partebeenden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Startbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zurück.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
