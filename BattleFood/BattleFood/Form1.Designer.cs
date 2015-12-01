@@ -208,6 +208,7 @@
             this.Text = "na";
             this.Load += new System.EventHandler(this.frm_play_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_play_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frm_play_KeyUp);
             this.pnl_player2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbox_player2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbox_health2)).EndInit();

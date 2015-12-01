@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -148,6 +149,13 @@ namespace BattleFood
             p_laufenImage[3] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 3));
             p_laufenImage[4] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 4));
         }
+        
+        private Image spiegelImage(Image img)
+        {
+            Image image = img;
+            image.RotateFlip(RotateFlipType.Rotate180FlipY);
+            return image;
+        }
 
         private void spiegelPictureBox(PictureBox pbox)
         {
@@ -274,7 +282,7 @@ namespace BattleFood
                         }
                     }
                     break;
-                case Team.Player2
+                case Team.Player2:
                     if (IsOutOfTable(pnl_player2))
                     {
                         if (tmr_animateImage.Enabled)
@@ -290,6 +298,243 @@ namespace BattleFood
                     }
                     break;
             }
+        }
+
+        private void frm_play_KeyUp(object sender, KeyEventArgs e)
+        {
+            tmr_animateImage.Stop();
+            switch (currentPlayer)
+            {
+                case Team.Player1:
+                    if (player1_health > 0)
+                    {
+                        switch (player1_image)
+                        {
+                            case PlayerImage.Potato:
+                                pbox_player1.Image = Properties.Resources.p_normal;
+                                break;
+                            case PlayerImage.Melone:
+                                pbox_player1.Image = Properties.Resources.m_normal;
+                                break;
+                            case PlayerImage.Onion:
+                                pbox_player1.Image = Properties.Resources.o_normal;
+                                break;
+                        }
+                    }
+                    if (player1_laufeRechts == false)
+                    {
+                        spiegelPictureBox(pbox_player1);
+                    }
+                    break;
+                case Team.Player2:
+                    if (player2_health > 0)
+                    {
+                        switch (player2_image)
+                        {
+                            case PlayerImage.Potato:
+                                pbox_player2.Image = Properties.Resources.p_normal;
+                                break;
+                            case PlayerImage.Melone:
+                                pbox_player2.Image = Properties.Resources.m_normal;
+                                break;
+                            case PlayerImage.Onion:
+                                pbox_player2.Image = Properties.Resources.o_normal;
+                                break;
+                        }
+                    }
+                    if (player1_laufeRechts == false)
+                    {
+                        spiegelPictureBox(pbox_player1);
+                    }
+                    break;
+            }
+        }
+
+        private void UpdatePlayerStatus()
+        {
+            if (result != "")
+            {
+                int posX = 0;
+                int posY = 0;
+                int hp = 0;
+                int shx = 0;
+                int shy = 0;
+                bool shr = true;
+
+                foreach (string par in result.Split('|'))
+                {
+                    if (par.StartsWith("POSX:"))
+                    {
+                        posX = (int) par.Split(':').GetValue(1);
+                    }
+                    else if (par.StartsWith("POSY:"))
+                    {
+                        posY = (int) par.Split(':').GetValue(1);
+                    }
+                    else if (par.StartsWith("HP:"))
+                    {
+                        hp = (int) par.Split(':').GetValue(1);
+                    }
+                    else if (par.StartsWith("SHX:"))
+                    {
+                        shx = (int) par.Split(':').GetValue(1);
+                    }
+                    else if (par.StartsWith("SHY:"))
+                    {
+                        shy = (int) par.Split(':').GetValue(1);
+                    }
+                    else if (par.StartsWith("SHR:"))
+                    {
+                        if (par.Split(':').GetValue(1).Equals("true"))
+                        {
+                            shr = true;
+                        }
+                        else
+                        {
+                            shr = false;
+                        }
+                    }
+                }
+                switch (currentPlayer)
+                {
+                    case Team.Player1:
+                        player2_position = new Point(posX, posY);
+                        player2_health = hp;
+                        pbox_kugel2.Location = new Point(shx, shy);
+                        if (shr)
+                        {
+                            pbox_kugel2.Image = Properties.Resources.bulletrechts;
+                        }
+                        else
+                        {
+                            pbox_kugel2.Image = spiegelImage(Properties.Resources.bulletrechts);
+                        }
+                        break;
+                    case Team.Player2:
+                        player1_position = new Point(posX, posY);
+                        player1_health = hp;
+                        pbox_kugel1.Location = new Point(shx, shy);
+                        if (shr)
+                        {
+                            pbox_kugel1.Image = Properties.Resources.bulletrechts;
+                        }
+                        else
+                        {
+                            pbox_kugel1.Image = spiegelImage(Properties.Resources.bulletrechts);
+                        }
+                        break;
+                }
+                if (player1_health == 0 || player2_health == 0)
+                {
+                    Thread.Sleep(500);
+                    if (player1_health == 0)
+                    {
+                        MessageBox.Show("Der Server hat verloren!" + "\n" + "Der Client hat gewonnen!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Der Client hat verloren!" + "\n" + "Der Server hat gewonnen!");
+                    }
+                    this.Hide();
+                    frm_start.Show();
+                }
+            }
+            SetPlayerProbs();
+        }
+
+        private void SetPlayerProbs()
+        {
+            switch (currentPlayer)
+            {
+                case Team.Player1:
+                    pnl_player2.Location = player2_position;
+                    break;
+                case Team.Player2:
+                    pnl_player1.Location = player2_position;
+                    break;
+            }
+            SetzeLebensAnzeige(pbox_health1, pbox_player1, player1_health, player1_image);
+            SetzeLebensAnzeige(pbox_health2, pbox_player2, player2_health, player2_image);
+        }
+
+        private void SetzeLebensAnzeige(PictureBox playerHealthBox, PictureBox playerBox, int value, PlayerImage playerImage)
+        {
+            if (value == 0)
+            {
+                playerHealthBox.Image = Properties.Resources.hpbartot1;
+                switch (playerImage)
+                {
+                    case PlayerImage.Potato:
+                        playerBox.Image = Properties.Resources.p_die;
+                        break;
+                    case PlayerImage.Melone:
+                        playerBox.Image = Properties.Resources.m_die;
+                        break;
+                    case PlayerImage.Onion:
+                        playerBox.Image = Properties.Resources.m_die;
+                        break;
+                }
+            }
+            else if (value >= 1 && value <= 10)
+            {
+                playerHealthBox.Image = Properties.Resources.hpbar10;
+            }
+            else if (value >= 11 && value <= 20)
+            {
+                playerHealthBox.Image = Properties.Resources.hpbar20;
+            }
+            else if (value >= 21 && value <= 30)
+            {
+                playerHealthBox.Image = Properties.Resources.hpbar30;
+            }
+            else if (value >= 31 && value <= 40)
+            {
+                playerHealthBox.Image = Properties.Resources.hpbar40;
+            }
+            else if (value >= 41 && value <= 50)
+            {
+                playerHealthBox.Image = Properties.Resources.hpbar50;
+            }
+            else if (value >= 51 && value <= 60)
+            {
+                playerHealthBox.Image = Properties.Resources.hpbar60;
+            }
+            else if (value >= 61 && value <= 70)
+            {
+                playerHealthBox.Image = Properties.Resources.hpbar70;
+            }
+            else if (value >= 71 && value <= 80)
+            {
+                playerHealthBox.Image = Properties.Resources.hpbar80;
+            }
+            else if (value >= 81 && value <= 90)
+            {
+                playerHealthBox.Image = Properties.Resources.hpbar90;
+            }
+            else if (value >= 91 && value <= 100)
+            {
+                playerHealthBox.Image = Properties.Resources.hpbar100;
+            }
+        }
+
+        private void ToggleSpielerPosition()
+        {
+            switch (currentPlayer)
+            {
+                case Team.Player1:
+                    currentPlayer = Team.Player2;
+                    pnl_player2.BringToFront();
+                    break;
+                case Team.Player2:
+                    currentPlayer = Team.Player1;
+                    pnl_player1.BringToFront();
+                    break;
+            }
+        }
+
+        private bool IsOutOfTable(Panel pbox)
+        {
+            return (pbox.Location.X < -(pbox.Width / 2) + 110) || (pbox.Location.X > ClientSize.Width - (pbox.Width / 2) - 90);
         }
 
         private void tmr_animateImage_Tick(object sender, EventArgs e)
@@ -322,12 +567,6 @@ namespace BattleFood
 
         }
 
-        private Image spiegelImage(Image img)
-        {
-            Image image = img;
-            image.RotateFlip(RotateFlipType.Rotate180FlipY);
-            return image;
-        }
 
 
     }
