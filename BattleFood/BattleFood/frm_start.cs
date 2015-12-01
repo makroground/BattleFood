@@ -48,7 +48,7 @@ namespace BattleFood
                 System.Media.SoundPlayer player = new System.Media.SoundPlayer(new MemoryStream(Properties.Resources.frametraxx_Manga_Action));
                 frm_options.music_playing = Properties.Settings.music_on;
                 player.Load();
-                player.Play();
+                player.Play(); 
             }
         }
     }
