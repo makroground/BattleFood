@@ -119,35 +119,35 @@ namespace BattleFood
             p_laufenImage[3] = (Image)Properties.Resources.ResourceManager.GetObject("p_lfn_" + 3);
             p_laufenImage[4] = (Image)Properties.Resources.ResourceManager.GetObject("p_lfn_" + 4);
 
-            p_laufenImage[0] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("p_lfn_" + 0));
-            p_laufenImage[1] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("p_lfn_" + 1));
-            p_laufenImage[2] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("p_lfn_" + 2));
-            p_laufenImage[3] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("p_lfn_" + 3));
-            p_laufenImage[4] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("p_lfn_" + 4));
+            p_laufenImageI[0] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("p_lfn_" + 0));
+            p_laufenImageI[1] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("p_lfn_" + 1));
+            p_laufenImageI[2] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("p_lfn_" + 2));
+            p_laufenImageI[3] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("p_lfn_" + 3));
+            p_laufenImageI[4] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("p_lfn_" + 4));
 
-            p_laufenImage[0] = (Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 0);
-            p_laufenImage[1] = (Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 1);
-            p_laufenImage[2] = (Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 2);
-            p_laufenImage[3] = (Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 3);
-            p_laufenImage[4] = (Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 4);
+            m_laufenImage[0] = (Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 0);
+            m_laufenImage[1] = (Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 1);
+            m_laufenImage[2] = (Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 2);
+            m_laufenImage[3] = (Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 3);
+            m_laufenImage[4] = (Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 4);
 
-            p_laufenImage[0] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 0));
-            p_laufenImage[1] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 1));
-            p_laufenImage[2] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 2));
-            p_laufenImage[3] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 3));
-            p_laufenImage[4] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 4));
+            m_laufenImageI[0] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 0));
+            m_laufenImageI[1] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 1));
+            m_laufenImageI[2] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 2));
+            m_laufenImageI[3] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 3));
+            m_laufenImageI[4] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("m_lfn_" + 4));
 
-            p_laufenImage[0] = (Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 0);
-            p_laufenImage[1] = (Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 1);
-            p_laufenImage[2] = (Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 2);
-            p_laufenImage[3] = (Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 3);
-            p_laufenImage[4] = (Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 4);
+            o_laufenImage[0] = (Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 0);
+            o_laufenImage[1] = (Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 1);
+            o_laufenImage[2] = (Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 2);
+            o_laufenImage[3] = (Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 3);
+            o_laufenImage[4] = (Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 4);
 
-            p_laufenImage[0] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 0));
-            p_laufenImage[1] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 1));
-            p_laufenImage[2] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 2));
-            p_laufenImage[3] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 3));
-            p_laufenImage[4] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 4));
+            o_laufenImageI[0] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 0));
+            o_laufenImageI[1] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 1));
+            o_laufenImageI[2] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 2));
+            o_laufenImageI[3] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 3));
+            o_laufenImageI[4] = spiegelImage((Image)Properties.Resources.ResourceManager.GetObject("o_lfn_" + 4));
         }
         
         private Image spiegelImage(Image img)
@@ -539,35 +539,426 @@ namespace BattleFood
 
         private void tmr_animateImage_Tick(object sender, EventArgs e)
         {
+            switch (currentPlayer)
+            {
+                case Team.Player1:
+                    int bewegePixel1 = 0;
 
+                    if (player1_laufeRechts)
+                    {
+                        switch (player1_image)
+                        {
+                            case PlayerImage.Potato:
+                                pbox_player1.Image = (Image)p_laufenImage.GetValue(player1_curRunPos);
+                                break;
+                            case PlayerImage.Melone:
+                                pbox_player1.Image = (Image)m_laufenImage.GetValue(player1_curRunPos);
+                                break;
+                            case PlayerImage.Onion:
+                                pbox_player1.Image = (Image)o_laufenImage.GetValue(player1_curRunPos);
+                                break;
+                        }
+                        bewegePixel1 = -5;
+                    }
+                    else
+                    {
+                        switch (player1_image)
+                        {
+                            case PlayerImage.Potato:
+                                pbox_player1.Image = (Image)p_laufenImageI.GetValue(player1_curRunPos);
+                                break;
+                            case PlayerImage.Melone:
+                                pbox_player1.Image = (Image)m_laufenImageI.GetValue(player1_curRunPos);
+                                break;
+                            case PlayerImage.Onion:
+                                pbox_player1.Image = (Image)o_laufenImageI.GetValue(player1_curRunPos);
+                                break;
+                        }
+                        bewegePixel1 = 5;
+                    }
+                    if (player1_curRunPos < 4)
+                    {
+                        player1_curRunPos += 1;
+                    }
+                    else if (player1_curRunPos == 4)
+                    {
+                        player1_curRunPos = 0;
+                    }
+                    player1_position = new Point(pnl_player1.Location.X + bewegePixel1, pnl_player1.Location.Y);
+                    pnl_player1.Location = player1_position;
+                    break;
+                case Team.Player2:
+                    int bewegePixel2 = 0;
+
+                    if (player2_laufeRechts)
+                    {
+                        switch (player2_image)
+                        {
+                            case PlayerImage.Potato:
+                                pbox_player2.Image = (Image)p_laufenImage.GetValue(player2_curRunPos);
+                                break;
+                            case PlayerImage.Melone:
+                                pbox_player2.Image = (Image)m_laufenImage.GetValue(player2_curRunPos);
+                                break;
+                            case PlayerImage.Onion:
+                                pbox_player2.Image = (Image)o_laufenImage.GetValue(player2_curRunPos);
+                                break;
+                        }
+                        bewegePixel2 = -5;
+                    }
+                    else
+                    {
+                        switch (player2_image)
+                        {
+                            case PlayerImage.Potato:
+                                pbox_player2.Image = (Image)p_laufenImageI.GetValue(player2_curRunPos);
+                                break;
+                            case PlayerImage.Melone:
+                                pbox_player2.Image = (Image)m_laufenImageI.GetValue(player2_curRunPos);
+                                break;
+                            case PlayerImage.Onion:
+                                pbox_player2.Image = (Image)o_laufenImageI.GetValue(player2_curRunPos);
+                                break;
+                        }
+                        bewegePixel2 = 5;
+                    }
+                    if (player2_curRunPos < 4)
+                    {
+                        player2_curRunPos += 1;
+                    }
+                    else if (player2_curRunPos == 4)
+                    {
+                        player2_curRunPos = 0;
+                    }
+                    player2_position = new Point(pnl_player2.Location.X + bewegePixel2, pnl_player2.Location.Y);
+                    pnl_player2.Location = player2_position;
+                    break;
+            }
         }
 
         private void tmr_schiessen1_Tick(object sender, EventArgs e)
         {
-
+            if (!pbox_kugel1.Visible)
+            {
+                pbox_kugel1.Visible = true;
+            }
+            if (schuss1_nachRechts)
+            {
+                if (pbox_kugel1.Location.X < ClientSize.Width)
+                {
+                    pbox_kugel1.Location = new Point(pbox_kugel1.Location.X + 10, pbox_kugel1.Location.Y);
+                }
+                else
+                {
+                    pbox_kugel1.Visible = false;
+                    tmr_schiessen1.Stop();
+                }
+            }
+            else
+            {
+                if (pbox_kugel1.Location.X < -pbox_kugel1.Width)
+                {
+                    pbox_kugel1.Location = new Point(pbox_kugel1.Location.X - 10, pbox_kugel1.Location.Y);
+                }
+                else
+                {
+                    pbox_kugel1.Visible = false;
+                    tmr_schiessen1.Stop();
+                }
+            }
         }
 
         private void tmr_schiessen2_Tick(object sender, EventArgs e)
         {
-
+            if (!pbox_kugel2.Visible)
+            {
+                pbox_kugel2.Visible = true;
+            }
+            if (schuss2_nachRechts)
+            {
+                if (pbox_kugel2.Location.X < ClientSize.Width)
+                {
+                    pbox_kugel2.Location = new Point(pbox_kugel2.Location.X + 10, pbox_kugel2.Location.Y);
+                }
+                else
+                {
+                    pbox_kugel2.Visible = false;
+                    tmr_schiessen2.Stop();
+                }
+            }
+            else
+            {
+                if (pbox_kugel2.Location.X < -pbox_kugel2.Width)
+                {
+                    pbox_kugel2.Location = new Point(pbox_kugel2.Location.X - 10, pbox_kugel2.Location.Y);
+                }
+                else
+                {
+                    pbox_kugel2.Visible = false;
+                    tmr_schiessen2.Stop();
+                }
+            }
         }
 
         private void tmr_jump_Tick(object sender, EventArgs e)
         {
-
+            switch (currentPlayer)
+            {
+                case Team.Player1:
+                    if (player1_jump)
+                    {
+                        if (pnl_player1.Location.Y >= ClientSize.Height - pnl_player1.Height - 180 - 80)
+                        {
+                            player1_position = new Point(pnl_player1.Location.X, pnl_player1.Location.Y - 5);
+                            pnl_player1.Location = player1_position;
+                        }
+                        else
+                        {
+                            player1_jump = false;
+                        }
+                    }
+                    else
+                    {
+                        if (pnl_player1.Location.Y < ClientSize.Height - pnl_player1.Height - 180)
+                        {
+                            player1_position = new Point(pnl_player1.Location.X, pnl_player1.Location.Y + 5);
+                            pnl_player1.Location = player1_position;
+                        }
+                        else
+                        {
+                            tmr_jump.Stop();
+                        }
+                    }
+                    break;
+                case Team.Player2:
+                    if (player2_jump)
+                    {
+                        if (pnl_player2.Location.Y >= ClientSize.Height - pnl_player2.Height - 180 - 80)
+                        {
+                            player2_position = new Point(pnl_player2.Location.X, pnl_player2.Location.Y - 5);
+                            pnl_player2.Location = player2_position;
+                        }
+                        else
+                        {
+                            player2_jump = false;
+                        }
+                    }
+                    else
+                    {
+                        if (pnl_player2.Location.Y < ClientSize.Height - pnl_player2.Height - 180)
+                        {
+                            player2_position = new Point(pnl_player2.Location.X, pnl_player2.Location.Y + 5);
+                            pnl_player2.Location = player2_position;
+                        }
+                        else
+                        {
+                            tmr_jump.Stop();
+                        }
+                    }
+                    break;
+            }
         }
 
         private void tmr_falldown1_Tick(object sender, EventArgs e)
         {
-
+            if (pnl_player1.Location.Y < ClientSize.Height)
+            {
+                pnl_player1.Location = new Point(pnl_player1.Location.X, pnl_player1.Location.Y + 10);
+            }
+            else
+            {
+                tmr_falldown1.Stop();
+            }
         }
 
         private void tmr_falldown2_Tick(object sender, EventArgs e)
         {
-
+            if (pnl_player2.Location.Y < ClientSize.Height)
+            {
+                pnl_player2.Location = new Point(pnl_player2.Location.X, pnl_player2.Location.Y + 10);
+            }
+            else
+            {
+                tmr_falldown2.Stop();
+            }
         }
 
+        private void tmr_hurt_Tick(object sender, EventArgs e)
+        {
+            switch (currentPlayer)
+            {
+                case Team.Player1:
+                    if (pbox_kugel2.Bounds.IntersectsWith(pnl_player1.Bounds))
+                    {
+                        player1_health -= 2;
+                    }
+                    foreach (PictureBox pic in picbox)
+                    {
+                        if (pic.Bounds.IntersectsWith(pnl_player1.Bounds))
+                        {
+                            player1_health -= 1;
+                        }
+                    }
+                    break;
+                case Team.Player2:
+                    if (pbox_kugel1.Bounds.IntersectsWith(pnl_player2.Bounds))
+                    {
+                        player2_health -= 2;
+                    }
+                    foreach (PictureBox pic in picbox)
+                    {
+                        if (pic.Bounds.IntersectsWith(pnl_player2.Bounds))
+                        {
+                            player2_health -= 1;
+                        }
+                    }
+                    break;
+            }
+        }
 
+        private void tmr_fallingObjects_Tick(object sender, EventArgs e)
+        {
+            if (frequency < 40)
+            {
+                frequency += 1;
+            }
+            else
+            {
+                PositionX = 50;
+                PositionY = rnd.Next(100, 950);
+
+                PictureBox newPic = new PictureBox();
+                newPic.Left = PositionX;
+                newPic.Name = "newPic" + picbox.Count.ToString();
+                newPic.Size = new Size(75, 75);
+                newPic.SizeMode = PictureBoxSizeMode.Zoom;
+                newPic.BringToFront();
+                newPic.BackColor = Color.Transparent;
+
+                picbox.Enqueue(newPic);
+
+                int zahl = rnd.Next(1, 33);
+                if ((zahl >= 1) && (zahl <= 5))
+                {
+                    newPic.Image = Properties.Resources.tasse;
+                    newPic.Tag = "tasse";
+                }
+                else if ((zahl >= 6) && (zahl <= 10))
+                {
+                    newPic.Image = Properties.Resources.fleischklopper;
+                    newPic.Size = new Size(50, 80);
+                    newPic.Tag = "fleischklopper";
+                }
+                else if ((zahl >= 11) && (zahl <= 15))
+                {
+                    newPic.Image = Properties.Resources.eieruhr;
+                    newPic.Tag = "eieruhr";
+                }
+                else if ((zahl >= 16) && (zahl <= 20))
+                {
+                    newPic.Image = Properties.Resources.norbert;
+                    newPic.Tag = "norbert";
+                }
+                else if (zahl == 21)
+                {
+                    newPic.Image = Properties.Resources.messer;
+                    newPic.Size = new Size(32, 225);
+                    newPic.Tag = "messer";
+                }
+                else if ((zahl >= 22) && (zahl <= 23))
+                {
+                    newPic.Image = Properties.Resources.lebenplus;
+                    newPic.Size = new Size(25, 25);
+                    newPic.Tag = "leben";
+                }
+                else if ((zahl >= 24) && (zahl <= 25))
+                {
+                    newPic.Image = Properties.Resources.stern;
+                    newPic.Size = new Size(25, 25);
+                    newPic.Tag = "stern";
+                }
+                else if ((zahl >= 26) && (zahl <= 27))
+                {
+                    newPic.Image = Properties.Resources.portal;
+                    newPic.Size = new Size(25, 25);
+                    newPic.Tag = "portal";
+                }
+                else if ((zahl >= 28) && (zahl <= 32))
+                {
+                    newPic.Image = Properties.Resources.marmelade;
+                    newPic.Size = new Size(50, 65);
+                    newPic.Tag = "marmelade";
+                }
+                else if ((zahl >= 33) && (zahl <= 34))
+                {
+                    newPic.Image = Properties.Resources.nade;
+                    newPic.Size = new Size(65, 50);
+                    newPic.Tag = "nade";
+                }
+                this.Controls.Add(newPic);
+                frequency = 1;
+            }
+
+            foreach (PictureBox onePic in picbox)
+            {
+                if (onePic.Top >= 768)
+                {
+                    picbox.Dequeue();
+                    this.Controls.Remove(onePic);
+                }
+                else
+                {
+                    onePic.Top = onePic.Top + 10;
+                    onePic.BringToFront();
+                }
+            }
+        }
+
+        private void tmr_updatePlayer_Tick(object sender, EventArgs e)
+        {
+            if (networkConnection.result != "")
+            {
+                result = networkConnection.result;
+                if (result.StartsWith("IP:"))
+                {
+                    networkConnection.ConnectToIP(result.Split(':').GetValue(1));
+                }
+                else
+                {
+                    UpdatePlayerStatus();
+                }
+            }
+            if (networkConnection.isRunning)
+            {
+                switch (currentPlayer)
+                {
+                    case Team.Player1:
+                        String shr1 = "true";
+                        if (schuss1_nachRechts)
+                        {
+                            shr1 = "true";
+                        }
+                        else
+                        {
+                            shr1 = "false";
+                        }
+                        networkConnection.SendString("POSX:" + player1_position.X + "|" + "POSY:" + player1_position.Y + "|" + "HP:" + player1_health + "|" + "SHX:" + pbox_kugel1.Location.X + "|" + "SHY:" + pbox_kugel1.Location.Y + "|" + "SHR:" + shr1);
+                        break;
+                    case Team.Player2:
+                        String shr2 = "true";
+                        if (schuss2_nachRechts)
+                        {
+                            shr2 = "true";
+                        }
+                        else
+                        {
+                            shr2 = "false";
+                        }
+                        networkConnection.SendString("POSX:" + player2_position.X + "|" + "POSY:" + player2_position.Y + "|" + "HP:" + player2_health + "|" + "SHX:" + pbox_kugel2.Location.X + "|" + "SHY:" + pbox_kugel2.Location.Y + "|" + "SHR:" + shr2);
+                        break;
+                }
+            }
+        }
 
     }
 }

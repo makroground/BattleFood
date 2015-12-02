@@ -45,6 +45,9 @@
             this.tmr_jump = new System.Windows.Forms.Timer(this.components);
             this.tmr_falldown1 = new System.Windows.Forms.Timer(this.components);
             this.tmr_falldown2 = new System.Windows.Forms.Timer(this.components);
+            this.tmr_updatePlayer = new System.Windows.Forms.Timer(this.components);
+            this.tmr_hurt = new System.Windows.Forms.Timer(this.components);
+            this.tmr_fallingObjects = new System.Windows.Forms.Timer(this.components);
             this.pnl_player2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbox_player2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbox_health2)).BeginInit();
@@ -61,28 +64,25 @@
             this.pnl_player2.Controls.Add(this.pbox_player2);
             this.pnl_player2.Controls.Add(this.pbox_health2);
             this.pnl_player2.Controls.Add(this.lbl_name2);
-            this.pnl_player2.Location = new System.Drawing.Point(841, 307);
-            this.pnl_player2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnl_player2.Location = new System.Drawing.Point(561, 200);
             this.pnl_player2.Name = "pnl_player2";
-            this.pnl_player2.Size = new System.Drawing.Size(90, 154);
+            this.pnl_player2.Size = new System.Drawing.Size(60, 100);
             this.pnl_player2.TabIndex = 4;
             // 
             // pbox_player2
             // 
-            this.pbox_player2.Location = new System.Drawing.Point(0, 62);
-            this.pbox_player2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbox_player2.Location = new System.Drawing.Point(0, 40);
             this.pbox_player2.Name = "pbox_player2";
-            this.pbox_player2.Size = new System.Drawing.Size(90, 92);
+            this.pbox_player2.Size = new System.Drawing.Size(60, 60);
             this.pbox_player2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbox_player2.TabIndex = 2;
             this.pbox_player2.TabStop = false;
             // 
             // pbox_health2
             // 
-            this.pbox_health2.Location = new System.Drawing.Point(0, 38);
-            this.pbox_health2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbox_health2.Location = new System.Drawing.Point(0, 25);
             this.pbox_health2.Name = "pbox_health2";
-            this.pbox_health2.Size = new System.Drawing.Size(90, 23);
+            this.pbox_health2.Size = new System.Drawing.Size(60, 15);
             this.pbox_health2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbox_health2.TabIndex = 1;
             this.pbox_health2.TabStop = false;
@@ -92,9 +92,8 @@
             this.lbl_name2.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Bold);
             this.lbl_name2.ForeColor = System.Drawing.Color.Black;
             this.lbl_name2.Location = new System.Drawing.Point(0, 0);
-            this.lbl_name2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_name2.Name = "lbl_name2";
-            this.lbl_name2.Size = new System.Drawing.Size(90, 38);
+            this.lbl_name2.Size = new System.Drawing.Size(60, 25);
             this.lbl_name2.TabIndex = 1;
             this.lbl_name2.Text = "Client";
             this.lbl_name2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -105,28 +104,25 @@
             this.pnl_player1.Controls.Add(this.pbox_player1);
             this.pnl_player1.Controls.Add(this.pbox_health1);
             this.pnl_player1.Controls.Add(this.lbl_name1);
-            this.pnl_player1.Location = new System.Drawing.Point(90, 307);
-            this.pnl_player1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnl_player1.Location = new System.Drawing.Point(60, 200);
             this.pnl_player1.Name = "pnl_player1";
-            this.pnl_player1.Size = new System.Drawing.Size(90, 154);
+            this.pnl_player1.Size = new System.Drawing.Size(60, 100);
             this.pnl_player1.TabIndex = 3;
             // 
             // pbox_player1
             // 
-            this.pbox_player1.Location = new System.Drawing.Point(0, 62);
-            this.pbox_player1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbox_player1.Location = new System.Drawing.Point(0, 40);
             this.pbox_player1.Name = "pbox_player1";
-            this.pbox_player1.Size = new System.Drawing.Size(90, 92);
+            this.pbox_player1.Size = new System.Drawing.Size(60, 60);
             this.pbox_player1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbox_player1.TabIndex = 3;
             this.pbox_player1.TabStop = false;
             // 
             // pbox_health1
             // 
-            this.pbox_health1.Location = new System.Drawing.Point(0, 38);
-            this.pbox_health1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbox_health1.Location = new System.Drawing.Point(0, 25);
             this.pbox_health1.Name = "pbox_health1";
-            this.pbox_health1.Size = new System.Drawing.Size(90, 23);
+            this.pbox_health1.Size = new System.Drawing.Size(60, 15);
             this.pbox_health1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbox_health1.TabIndex = 1;
             this.pbox_health1.TabStop = false;
@@ -136,9 +132,8 @@
             this.lbl_name1.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Bold);
             this.lbl_name1.ForeColor = System.Drawing.Color.Black;
             this.lbl_name1.Location = new System.Drawing.Point(0, 0);
-            this.lbl_name1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_name1.Name = "lbl_name1";
-            this.lbl_name1.Size = new System.Drawing.Size(90, 38);
+            this.lbl_name1.Size = new System.Drawing.Size(60, 25);
             this.lbl_name1.TabIndex = 1;
             this.lbl_name1.Text = "Server";
             this.lbl_name1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -156,20 +151,18 @@
             // pbox_kugel1
             // 
             this.pbox_kugel1.BackColor = System.Drawing.Color.Transparent;
-            this.pbox_kugel1.Location = new System.Drawing.Point(-30, -15);
-            this.pbox_kugel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbox_kugel1.Location = new System.Drawing.Point(-20, -10);
             this.pbox_kugel1.Name = "pbox_kugel1";
-            this.pbox_kugel1.Size = new System.Drawing.Size(30, 15);
+            this.pbox_kugel1.Size = new System.Drawing.Size(20, 10);
             this.pbox_kugel1.TabIndex = 5;
             this.pbox_kugel1.TabStop = false;
             // 
             // pbox_kugel2
             // 
             this.pbox_kugel2.BackColor = System.Drawing.Color.Transparent;
-            this.pbox_kugel2.Location = new System.Drawing.Point(-30, -15);
-            this.pbox_kugel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbox_kugel2.Location = new System.Drawing.Point(-20, -10);
             this.pbox_kugel2.Name = "pbox_kugel2";
-            this.pbox_kugel2.Size = new System.Drawing.Size(30, 15);
+            this.pbox_kugel2.Size = new System.Drawing.Size(20, 10);
             this.pbox_kugel2.TabIndex = 6;
             this.pbox_kugel2.TabStop = false;
             // 
@@ -193,17 +186,33 @@
             this.tmr_falldown2.Interval = 25;
             this.tmr_falldown2.Tick += new System.EventHandler(this.tmr_falldown2_Tick);
             // 
+            // tmr_updatePlayer
+            // 
+            this.tmr_updatePlayer.Interval = 1;
+            this.tmr_updatePlayer.Tick += new System.EventHandler(this.tmr_updatePlayer_Tick);
+            // 
+            // tmr_hurt
+            // 
+            this.tmr_hurt.Enabled = true;
+            this.tmr_hurt.Tick += new System.EventHandler(this.tmr_hurt_Tick);
+            // 
+            // tmr_fallingObjects
+            // 
+            this.tmr_fallingObjects.Interval = 10;
+            this.tmr_fallingObjects.Tick += new System.EventHandler(this.tmr_fallingObjects_Tick);
+            // 
             // frm_play
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.ClientSize = new System.Drawing.Size(683, 499);
             this.Controls.Add(this.pbox_kugel2);
             this.Controls.Add(this.pbox_kugel1);
             this.Controls.Add(this.pnl_player2);
             this.Controls.Add(this.pnl_player1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_play";
             this.Text = "na";
             this.Load += new System.EventHandler(this.frm_play_Load);
@@ -239,6 +248,9 @@
         private System.Windows.Forms.Timer tmr_jump;
         private System.Windows.Forms.Timer tmr_falldown1;
         private System.Windows.Forms.Timer tmr_falldown2;
+        private System.Windows.Forms.Timer tmr_updatePlayer;
+        internal System.Windows.Forms.Timer tmr_hurt;
+        internal System.Windows.Forms.Timer tmr_fallingObjects;
     }
 }
 
