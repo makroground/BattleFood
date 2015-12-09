@@ -95,6 +95,7 @@
             this.btn_connect.Size = new System.Drawing.Size(124, 67);
             this.btn_connect.TabIndex = 6;
             this.btn_connect.UseVisualStyleBackColor = false;
+            this.btn_connect.Click += new System.EventHandler(this.btn_connect_Click);
             // 
             // btn_host
             // 
@@ -110,6 +111,7 @@
             this.btn_host.Size = new System.Drawing.Size(124, 67);
             this.btn_host.TabIndex = 5;
             this.btn_host.UseVisualStyleBackColor = false;
+            this.btn_host.Click += new System.EventHandler(this.btn_host_Click);
             // 
             // frm_network
             // 
