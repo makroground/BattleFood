@@ -1,6 +1,6 @@
 ﻿namespace BattleFood
 {
-    partial class Form2
+    partial class frm_options
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_options));
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_quit = new System.Windows.Forms.Button();
             this.lbl_space = new System.Windows.Forms.Label();

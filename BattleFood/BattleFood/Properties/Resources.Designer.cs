@@ -632,6 +632,16 @@ namespace BattleFood.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap VerbindenFull {
+            get {
+                object obj = ResourceManager.GetObject("VerbindenFull", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap xbutton {
             get {
                 object obj = ResourceManager.GetObject("xbutton", resourceCulture);

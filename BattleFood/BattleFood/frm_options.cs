@@ -13,10 +13,10 @@ using System.Windows.Forms;
 namespace BattleFood
 {
    
-    public partial class Form2 : Form
+    public partial class frm_options : Form
     {
         
-        public Form2()
+        public frm_options()
         {
             InitializeComponent();
             
